@@ -1,0 +1,606 @@
+/*Guía de examen
+Pedro Fernando Flores Palmeros
+Octubre 2019
+Fecha de entrega:16/octubre/2019
+Examen: 18/octubre/2019
+Alumno: Perez Aviles Carlos Alfredo
+Grupo 1AV6*/
+
+/*1.- Dado el siguiente fragmento de programa ¿Cuál es el valor de la variable?*/
+int a = 4, b = 10, c = 4;
+float z, d = 1.1;
+z = a + b/ c * d;
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int a=4, b=10, c=4;
+float z, d=1.1;
+z=a+b/c*d;
+printf("resultado=%f\n",z);
+}
+/*2.- Sean n y m dos variables de tipo int con los valores 2 y 5 respectivamente. Calcule el
+valor de las siguientes expresiones:*/
+•	(n + m ) == 2
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int n=2;
+int c , m=5;
+printf("(n=2)\n");
+printf("(m=5)\n");
+printf("(n+m)==2\n)");
+c=(n+m)==2;
+printf("false=%d",c);
+}
+•	(n > m ) = !(m==5)
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int n=2;
+int m=5;
+bool c;
+c=((n>m)==!(m==5));
+printf("c=%d",c);
+}
+•	(m%n) > 5
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int n=2;
+int m=5;
+bool c;
+c=((m%n)>5);
+printf("c=%d",c);
+}
+•	((m-n)*10)%4 = =1
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int n=2;
+int m=5;
+bool c;
+c=((((m-n)*10)%4 == 1));
+printf("c=%d",c);
+}
+
+/*3.- Dadas x,y y z tres variables de tipo int con los valores 2, 80 y 3 respectivamente.
+Calcule el valor de las siguientes expresiones.*/
+-> x == 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int x=2,y=80,z=3;
+bool c;
+c=(x==1);
+printf("c=%d",c);
+}
+-> !(y == 80)
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int x=2,y=80,z=3;
+bool c;
+c=(!(y == 80));
+printf("c=%d",c);
+}
+-> (x > y) || (z < 2 *x)
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int x=2,y=80,z=3;
+bool c;
+c=(x > y) || (z < 2 *x);
+printf("c=%d",c);
+}
+-> ( y % x) > (x == 1)
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int x=2,y=80,z=3;
+bool c;
+c=( y % x) > (x == 1);
+printf("c=%d",c);
+}
+-> (x < y) ^ (x == 2 ) || (z > 0)
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+int x=2,y=80,z=3;
+bool c;
+c=(x < y) ^ (x == 2 ) || (z > 0);
+printf("c=%d",c);
+}
+/*4.- Escriba un programa que lea la altura en centímetros de una persona
+y su edad, una vez conociendo estos datos obtenga el peso recomendado de acuerdo
+a la siguiente formula, Peso recomendado = (altura en cm - 100 + diez porciento de la edad) x 0.9*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int  main ( void ) {
+printf ( "1.-peso recomendado\n" );
+int a , b;
+printf("introduce tu altura en centimetros:");
+scanf("%d",&a);
+printf ( "introduce tu edad:" );
+scanf ("%d",&b);
+int c;
+c=(a - 100 + (b%10))*0.9;
+printf ( "peso recomendado:%d",c);
+}
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+int  main ( void ) {
+printf ("1.-peso recomendado\n");
+int a , b;
+printf("introduce tu altura en metros:");
+scanf("%d",&a);
+printf ( "introduce tu edad:" );
+scanf("%d",&b);
+int c;
+c=((a/100) - 100 + (b%10))*0.9;
+printf ( "peso recomendado:%d",c);
+}
+/*5.- Escriba un programa que lea el radio de un círculo e imprima su área y su circunferencia.*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int  main ( void ) {
+float area, circunferencia, radio;
+printf("calcular el area y la circunferencia de un circulo:\n");
+printf("escribe el radio del circulo:\n");
+scanf("%f",&radio);
+area=3.1416*(radio*radio), circunferencia= 3.1416*(radio*2);
+printf("area del circulo:%f\n", area);
+printf("circunferencia del circulo:%f\n", circunferencia);
+}
+/*6.- Escriba un programa que lea un número	 y determine si es para o impar.*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int numeros;
+printf("Introduzca un numero entero:");
+scanf("%d",&numeros );
+if( numeros%2==0)
+printf("es un numero par\n");
+else{
+printf("es un numero impar\n");
+}
+}
+/*7.- Redacte un programa que solicite del usuario tres números e indique cuál de ellos es
+el mayor.*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int numero1, numero2, numero3;
+printf("escriba el primer numero (entero):\n");
+scanf("%d",&numero1);
+printf("escriba el segundo numero (entero):\n");
+scanf("%d",&numero2);
+printf("escriba el tercer numero (entero):\n");
+scanf("%d",&numero3);
+if(numero1>=numero2||numero1>=numero3)
+printf("%d es el mayor:\n",numero1);
+else{
+if(numero2>=numero3||numero2>=numero1)
+printf("%d es el mayor:\n",numero2);
+else{
+if(numero3>=numero2||numero3>=numero1)
+printf("%d es el mayor:\n",numero3);
+}
+}
+}
+/*8.- Escriba un programa que, dada una cierta cantidad de dinero, calcule el numero
+mínimo de billetes o monedas. Ejemplo 1735:50 = 1 billete de mil pesos, 1 billete de 500
+pesos, 1 billete de 200 pesos, 1 billete de 20 pesos, 1 moneda de 10 pesos, 1 moneda de 5
+pesos y 1 moneda de 50 centavos.*/
+#include<stdlib.h>
+#include<conio.h>
+#include<stdio.h>
+#include<math.h>
+int main(void){
+int billetes1000, billetes500, billetes200, billetes50, billetes20, monedas10, monedas5, monedas2,monedas1, pesos;
+printf("Introduzca la cantidad(Pesos):\n");
+scanf("%d",&pesos);
+if(pesos>0){
+if(pesos>=1000){
+billetes1000=pesos/1000;
+pesos%=1000;
+}
+else
+billetes1000=0;
+if (pesos>=500){
+billetes500=pesos/500;
+pesos%=500;
+}
+else
+billetes500=0;
+if (pesos>=200){
+billetes200=pesos/200;
+pesos%=200;
+}
+else
+billetes200=0;
+if (pesos>=50){
+billetes50=pesos/50;
+pesos%=50;
+}
+else
+billetes50=0;
+if (pesos>=20 ){
+billetes20=pesos/20;
+pesos%=20;
+}
+else
+billetes20=0;
+if(pesos>=10){
+monedas10=pesos/10;
+pesos%=10;
+}
+else
+monedas10=0;
+if (pesos>=5){
+monedas5=pesos/5;
+pesos%=5;
+}
+else
+monedas5= 0;
+if (pesos>=2){
+monedas2=pesos/2;
+pesos%=2;
+}
+else
+monedas2=0;
+if (pesos>=1 ){
+monedas1=pesos/1;
+pesos%=1;
+}
+else
+monedas1=0;
+printf("%d billetes de 1000\n", billetes1000);
+printf("%d billetes de 500\n", billetes500);
+printf("%d billetes de 200\n", billetes200);
+printf("%d billetes de 50\n", billetes50);
+printf("%d billetes de 20\n", billetes20);
+printf("%d monedas de 10\n", monedas10);
+printf("%d monedas de 5\n", monedas5);
+printf("%d monedas de 2\n", monedas2);
+printf("%d monedas de 1\n", monedas1);
+}
+else
+printf("la cantidad no debe ser menor de cero");
+getch();
+return (0);
+}
+
+/*9.- Dado el siguiente grupo de sentencias ¿Cual es el resultado de z?*/
+x = 2;
+if( 3 != x ){
+if( 1 == x){
+z = 1;
+else
+z = x;
+} else
+z = 0;
+}
+
+/*10.- Una compañía de agua está implantando un nuevo sistema de cobro. Para cada casa
+realiza la siguiente factura:*/
+•	Los primeros 50 litros son gratis
+•	entre 50 y 200 litros se cobra el litro a 10 pesos.
+•	A partir de 200 litros el litro se cobra a 20 pesos.
+•	La cuota mínima es de 200 pesos, es decir si el dinero a pagar resulta menor que 200 pesos,
+entonces el pago sera de 200 pesos.
+Realice un programa que calcule el gasto de agua de una familia en un mes dada la cantidad de litros gastados.
+
+
+/*11.- Redacte un programa que calcule el minimo, el maximo y la media de una lista de
+numeros enteros, introducida por el usuario (10 numeros)*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int vector[10];
+int i;
+for (i=0; i<10; i++){
+printf("ingrese 10 numeros enteros:\n Numero %d\n", i+1);
+scanf("%d",&vector[i]);
+}
+int mayor, menor;
+mayor=vector[0];
+menor=vector[0];
+for(i=0; i<10; i++){
+if(vector[i]>mayor){
+mayor=vector[i];
+}
+if(vector[i]< menor){
+menor=vector[i];
+}
+}
+printf("El mayor es %d\n", mayor);
+printf("El menor es %d\n", menor);
+}
+/*12.- Escriba un programa que solicite del usuario un numero N y luego muestre por
+pantalla la siguiente ejecución:*/
+1
+1 2
+1 2 3
+.....
+1 2 3 4 ... N
+#include <conio.h>
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+int k,i,j;
+printf("introduce un numero:\n");
+scanf("%d",&k);
+printf("\n");
+for(i=1;i<=k;i++){
+for(j=1;j<=i;j++){
+printf("%d",j); } printf("\n");
+}
+}
+
+/*13.- Realice un programa que muestre por pantalla si un numero introducido por el
+usuario es primo o no.*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<math.h>
+int main(void){
+int numero,divisor, divisor=1, divisor=0, numero=0;
+printf("Introduce el numero:\n");
+scanf("%d",&numero);
+do{
+if(numero% divisor==0){
+divisor++;
+}
+divisor++;
+}while(divisor<=numero);
+if(divisor==2){
+    printf("el numero es primo\n");
+}else{
+printf("el numero no es primo\n");
+}
+return 0;
+}
+
+/*14.-Escriba un programa que solicite del usuario una letra (mayúscula o minúscula) e
+indique si es una vocal o consonante.*/
+#include<stdlib.h>
+#include<conio.h>
+#include<stdio.h>
+int main(void){
+char letra;
+printf("Introduzca una letra:\n");
+scanf("%c",&letra);
+if (letra == 'a' || letra == 'A' ||
+    letra == 'e' || letra == 'E' ||
+    letra == 'i' || letra == 'I' ||
+    letra == 'o' || letra == 'O' ||
+    letra == 'a' || letra == 'U' )
+printf("es una vocal\n");
+else
+printf("es consonante\n");
+getch();
+}
+
+/*15.- Escriba un programa que calcule la siguiente expresión matemática*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int i, n;
+printf("introduce el valor de n:\n");
+scanf("%d",&n);
+for (i=1;i<n;i++){
+i+=1;
+}
+printf("%d",i)
+}
+
+/*16.-Cuantas veces se ejecuta la función printf en el siguiente fragmento de programa?*/
+a = 9;
+for ( i = 0; i < 100; i++)
+if((a == a % 4)||(i%2)==0)
+printf("%d\n",a,i);
+
+/*17.- Escriba un programa que solicite un numero de segundo y muestre por pantalla dicha
+cantidad de tiempo en horas, minutos y segundos.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int segundos, horas, minutos;
+printf("introduce el numero en segundos que quieres convertir\n")
+scanf("%d",&segundos);
+horas=segundos/3600;
+minutos=segundos/60;
+segundos=segundos/1;
+printf("horas:%d minutoss:%d segundos:%d",horas,minutos,segundos);
+}
+
+
+/*18.- Después de ejecutar el siguiente fragmento de programa ¿Cuál es el valor final de la
+variable k?*/
+int x = 12, j = 5, k = 0;
+if( 0 == x % 4 )
+for( j = 0 ; j < 10; j = j + 4)
+k = k + j;
+else
+for(j = 0; j < 10; j = j + 2)
+k = k + j;
+
+/*19. ¿ Cuál es la finalidad de la instrucción while?*/
+ Es una estructura cíclica, que nos permite ejecutar una o varias líneas de código de manera
+ repetitiva sin necesidad de tener un valor inicial e incluso a veces sin siquiera conocer
+ cuando se va a dar el valor final que esperamos, los ciclos while, no dependen directamente
+ de valores numéricos, sino de valores booleanos, es decir su ejecución depende del valor de
+ verdad de una condición dada, verdadera o falso, nada más. De este modo los ciclos while, son
+ mucho más efectivos para condiciones indeterminadas, que no conocemos cuando se van a dar a
+ diferencia de los ciclos for, con los cuales se debe tener claro un principio, un final y un tamaño de paso.
+¿Cuál es evaluada la expresión lógica?
+
+¿Cuál es el mínimo número de veces que se puede ejecutar un bucle while-?
+ El bucle se ejecuta siempre una vez y al final se evalúa la condición para decir
+  si se ejecuta otra vez el bucle o se termina su ejecución.
+
+/*20.- ¿Cual es la finalidad de la instrucción do - while?¿En que difiere de la instrucción
+while?*/
+Los ciclos do-while son una estructura de control cíclica, los cuales nos permiten ejecutar una o v
+arias líneas de código de forma repetitiva sin necesidad de tener un valor inicial e incluso a veces
+sin siquiera conocer cuando se va a dar el valor final, hasta aquí son similares a los ciclos while,
+ sin embargo el ciclo do-while nos permite añadir cierta ventaja adicional y esta consiste que nos
+ da la posibilidad de ejecutar primero el bloque de instrucciones antes de evaluar la condición necesaria,
+ de este modo los ciclos do-while, son más efectivos para algunas situaciones específicas.
+
+/*21.- ¿Cual es el mínimo número de veces que se puede ejecutar un bucle do - while?
+Compararlo con un bucle while y explicar las razones por las que se diferencian.*/
+El bucle do..while es la última de las estructuras para implementar repeticiones de las
+ que dispone en Javascript y es una variación del bucle while visto anteriormente. Se utiliza
+  generalmente cuando no sabemos cuantas veces se habrá de ejecutar el bucle, igual que el bucle WHILE,
+  con la diferencia de que sabemos seguro que el bucle por lo menos se ejecutará una vez.
+
+
+/*22.- ¿Cual la finalidad de la instruccion for?¿En que se distingue de las instrucciones
+while y do-while?*/
+Como las expresiones son opcionales, se puede simular bucles while:
+for(;i < 100;) i = i + 1;
+for(;i++ < 100;);
+O bucles infinitos:
+for(;;);
+un bucle for como una extensión de un bucle while. La equivalencia entre un bucle for
+y un bucle while es la siguiente:
+[<inicialización>];
+while([<condición>]) {
+<sentencia>
+[<incremento>]
+}
+los bucles for no son extrictamente necesarios,ni tampoco lo son los bucles do...while, pero en muchas
+ocasiones simplifican el código de los bucles, haciendo más fácil la comprensión de un programa,
+ya sea para su análisis, su modificación o para su depuración.
+En un estilo de programación claro, los bucles for se suelen utilizar para recorrer listas de elementos
+int i=0;
+
+/*23.- Escribir un bucle que calcule la suma de cada tercer entero, comenzando por i = 2
+(es decir, calcular la suma de 2+5+8+11+... para dos o los valores de i menores que 100.
+Escribir el bucle de tres formas diferentes*/
+•	 Utilizando una instruccion while.
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int i,total;
+while{
+(i=2;i<=100;i++){
+total=total+i;
+printf("%d+",i);
+i+=2;
+}
+printf("El total es:%d\n",total);
+}
+}
+•	 Utilizando una instruccion do - while.
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int i,total;
+do{
+(i=2;i<=100;i++){
+total=total+i;
+printf("%d+",i);
+i+=2;
+}
+}while();
+printf("El total es:%d\n",total);
+}
+
+•	 Utilizando una instruccion for
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main(void){
+int i,total;
+for(i=2;i<=100;i++){
+total=total+i;
+printf("%d+",i);
+i+=2;
+}
+printf("El total es:%d\n",total);
+}
+/*24.- Escribir un programa que lea un valor a traves del teclado, lo asigne a una variable
+indicador y escriba uno de los siguientes mensajes dependiendo de su valor:*/
+•	Calor, si indicador tiene el valor de 1.
+•	Templado, si indicador tiene el valor de 2.
+•	Frio, si indicador tiene el valor 3.
+•	Fuera de rango si indicador tiene el valor de 4.
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main(void){
+printf("Indicador:");
+int opt;
+scanf("%d", & opt);
+if(opt==1){
+printf("Calor");
+}
+else{
+if(opt==2){
+printf("Templado");
+}
+else{
+if(opt==3){
+printf("Frio");
+}
+}
+if(opt==4){
+printf("Fuera de rango");
+}
+}
+}
+
+/*25.- Escribir un programa que lea un valor a traves del teclado, lo asigne a una variable
+color y escriba uno de los siguientes mensajes dependiendo de su valor:*/
+•	ROJO, si color tiene el valor de r o R.
+•	VERDE, si color tiene el valor de v o V.
+•	AZUL, si color tiene el valor de a o A.
+•	NEGRO si color tiene asigando cualquier otro caracter.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main (void){
+char n; int j=2;
+int s;
+printf("Indique letra: ");
+scanf("%c",&n);
+if(n =='R'||n=='r'){
+printf("ROJO\n");
+}
+else if(n =='v'||n=='V'){
+printf("VERDE");
+}else
+if(n == 'A' || n == 'a'){
+printf("AZUL\n");
+} else if(n == 'N' || n == 'n'){
+printf("NEGRO");
+} else {
+printf("no asignado.");
+}
+}
